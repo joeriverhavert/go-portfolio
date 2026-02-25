@@ -7,5 +7,3 @@ resources:
   - serviceaccount.yaml
   - clusterrolebinding.yaml
   - clusterrole.yaml
-  - gateway.yaml
-  - virtual-service.yaml
