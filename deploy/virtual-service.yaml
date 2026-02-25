@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: golang-portfolio-virtual-service
+  namespace: portfolio-system
+spec:
+  hosts:
+  - "cv.jverhavert.com"
+  gateways:
+    - golang-portfolio-gateway
+  http:
+  - name: "golang-portfolio-virtual-service"
+    route:
+    - destination:
+        host: golang-portfolio
+        port:
+          number: 80

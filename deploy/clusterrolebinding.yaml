@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: golang-portfolio-binding
+subjects:
+  - kind: ServiceAccount
+    name: golang-portfolio
+    namespace: golang-portfolio
+roleRef:
+  kind: ClusterRole
+  name: golang-portfolio
+  apiGroup: rbac.authorization.k8s.io

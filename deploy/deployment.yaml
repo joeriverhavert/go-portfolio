@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-portfolio
+  namespace: portfolio-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang-portfolio
+  template:
+    metadata:
+      labels:
+        app: golang-portfolio
+    spec:
+      containers:
+      - name: golang-portfolio
+        image: dockerhub.com/joeriverhavert/golang-portfolio:latest 
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+      serviceAccountName: golang-portfolio
+      imagePullSecrets:
+        - name: dockerhub-pull-secret
+
+        
