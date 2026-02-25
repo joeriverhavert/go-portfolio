@@ -21,7 +21,4 @@ spec:
         - containerPort: 80
         imagePullPolicy: Always
       serviceAccountName: golang-portfolio
-      imagePullSecrets:
-        - name: dockerhub-pull-secret
-
         
