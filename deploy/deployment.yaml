@@ -2,28 +2,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: golang-portfolio
-  namespace: portfolio-system
+  name: resume-portfolio
+  namespace: resume-portfolio
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: golang-portfolio
+      app: resume-portfolio
   template:
     metadata:
       labels:
-        app: golang-portfolio
+        app: resume-portfolio
     spec:
       containers:
-      - name: golang-portfolio
-        image: dockerhub.com/joeriverhavert/golang-portfolio:latest 
+      - name: resume-portfolio
+        image: docker.io/joeriverhavert/golang-portfolio:latest 
         ports:
         - containerPort: 80
         imagePullPolicy: Always
-      serviceAccountName: golang-portfolio
-      volumeMounts:
+        volumeMounts:
         - name: host-logs
           mountPath: /logs
+      serviceAccountName: resume-portfolio
       volumes:
         - name: host-logs
           hostPath:
