@@ -1431,13 +1431,18 @@ section,
 }
 
 .skills .skills-icons i {
-  font-size: 2rem;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color 0.3s;
 }
 
 .skills .skills-icons .custom-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
 }
 
 /*--------------------------------------------------------------
@@ -1980,49 +1985,67 @@ section,
 }
 
 /*--------------------------------------------------------------
+
 # Tools Built With Section
+
 --------------------------------------------------------------*/
 
 .tools-built-with.section {
-  margin-bottom: 60px;
-  /* Increased margin at the end of the section */
+
+  margin-bottom: 60px; /* Increased margin at the end of the section */
+
 }
 
 .tools-built-with .badge {
-  margin-top: 0.1rem;
-  /* Adjust this value to reduce or increase the top margin */
-  background-color: var(--default-color) !important;
-  /* Make labels white */
-  color: var(--background-color) !important;
-  /* Set text color to contrast with white */
+
+  margin-top: 0.1rem; /* Adjust this value to reduce or increase the top margin */
+
+  background-color: var(--default-color) !important; /* Make labels white */
+
+  color: var(--background-color) !important; /* Set text color to contrast with white */
+
 }
 
-
 .tools-built-with .mt-4 {
-  margin-top: 0.1rem;
-  /* Further reduced margin between labels and subtitle */
+
+  margin-top: 0; /* Removed margin between labels and subtitle */
+
 }
 
 @media (min-width: 992px) {
+
   .tools-built-with .d-flex.flex-wrap {
-    max-width: 800px;
-    /* Adjust this value based on your design */
+
+    max-width: 800px; /* Adjust this value based on your design */
+
     margin-left: auto;
+
     margin-right: auto;
+
   }
+
 }
 
 @media (max-width: 768px) {
+
   .tools-built-with .d-flex.flex-wrap {
+
     flex-direction: column;
+
     align-items: center;
+
   }
+
 }
 
 @media (max-width: 991.98px) {
+
   .tools-built-with .d-flex.flex-wrap {
+
     justify-content: center;
+
   }
+
 }
 
 @media (max-width: 767.98px) {
