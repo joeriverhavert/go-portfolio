@@ -36,37 +36,31 @@
 
   <header id="header" class="header dark-background d-flex flex-column justify-content-center">
     <i class="header-toggle d-xl-none bi bi-list"></i>
-
     <div class="header-container d-flex flex-column align-items-start">
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>~/home</a></li>
           <li><a href="#about"><i class="bi bi-person navicon"></i>~/about</a></li>
           <li><a href="#skills"><i class="bi bi-gear navicon"></i>~/stack</a></li>
-          <!-- <li><a href="#testimonials"><i class="bi bi-star navicon"></i>~/eval</a></li> -->
+          <li><a href="#testimonials"><i class="bi bi-star navicon"></i>~/eval</a></li>
           <li><a href="#contact"><i class="bi bi-envelope navicon"></i>~/ping</a></li>
         </ul>
       </nav>
-
     </div>
-
   </header>
 
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-
       <div class="background-elements">
         <div class="bg-circle circle-1"></div>
         <div class="bg-circle circle-2"></div>
       </div>
 
       <div class="hero-content">
-
         <div class="container">
           <div class="row align-items-center">
-
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
               <div class="hero-text">
                 <!--h1>Joeri<span class="accent-text">Verhavert</span></h1-->
@@ -99,18 +93,46 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
+    </section>
+    <!-- /Hero Section -->
 
-    </section><!-- /Hero Section -->
+    <!-- Tools Built With Section -->
+    <section id="tools-built-with" class="tools-built-with section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tools Built With</h2>
+        <p>This project was built with a modern cloud-native stack, focusing on efficiency, scalability, and automated
+          deployments.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <span class="badge bg-primary">Go</span>
+              <span class="badge bg-primary">Docker</span>
+              <span class="badge bg-primary">Kubernetes</span>
+              <span class="badge bg-primary">Cert-Manager</span>
+              <span class="badge bg-primary">Istio</span>
+              <span class="badge bg-primary">MetalLB</span>
+              <span class="badge bg-primary">Cilium</span>
+              <span class="badge bg-primary">Cloudflare</span>
+              <span class="badge bg-primary">Goaccess</span>
+              <span class="badge bg-primary">HTML5/CSS3/JS</span>
+              <span class="badge bg-primary">Bootstrap</span>
+              <span class="badge bg-primary">GitHub Actions</span>
+              <span class="badge bg-primary">FluxCD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Tools Built With Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row">
           <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
             <div class="profile-card">
@@ -126,7 +148,6 @@
               <div class="profile-content">
                 <h3>Joeri Verhavert</h3>
                 <p class="profession">Freelance DevOps Engineer</p>
-
                 <div class="contact-links">
                   <a href="mailto:joeri.verhavert@conro.be" class="contact-item">
                     <i class="bi bi-envelope-at"></i>
@@ -213,21 +234,16 @@
             </div>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /About Section -->
-
-    <!-- /Skills Section -->
+    </section>
+    <!-- /About Section -->
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <!-- <div class="deploy-info-label">
-          <i class="bi bi-terminal"></i> root@joeri-verhavert:~$./stack.sh
-        </div> -->
         <h2>Stack</h2>
         <p>Here's a look at the technologies and tools I'm experienced with.</p>
       </div><!-- End Section Title -->
@@ -280,77 +296,72 @@
     </section>
     <!-- /Skills Section -->
 
-    <!-- Testimonials Section -->
-    <!--  <section id="testimonials" class="testimonials section">
-
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Testimonials</h2>
-      <p>What others are saying about me.</p>
-    </div>
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-4">
-          <div class="testimonial-item">
-            <div class="testimonial-content">
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>Joeri is an exceptional DevOps engineer who played a key role in shaping our
-                  automation strategy. His expertise in custom Kubernetes Operators and deep knowledge of Kubernetes
-                  and Google Cloud significantly improved our platform’s scalability and reliability.</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <h3>Wouter Smet</h3>
-              <h4>Product Owner @ Telenet</h4>
+    <!-- About Section -->
+    <section id="testimonials" class="testimonials section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>What others are saying about me.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Joeri is an exceptional DevOps engineer who played a key role in shaping our
+                    automation strategy. His expertise in custom Kubernetes Operators and deep knowledge of Kubernetes
+                    and Google Cloud significantly improved our platform’s scalability and reliability.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <h3>Wouter Smet</h3>
+                <h4>Product Owner @ Telenet</h4>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4">
-          <div class="testimonial-item">
-            <div class="testimonial-content">
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>Joeri consistently delivers high-quality implementations and is a pleasure to work with. His
-                  proactive attitude, reliability, and team-first approach make him an invaluable asset to any
-                  team.</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <h3>Niels Verbeeck</h3>
-              <h4>Lead Architect @ Telenet</h4>
+          <div class="col-lg-4">
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I’ve worked with Joeri on automating cloud-native infrastructure for telcos, and he always
+                    brings fresh ideas while staying practical in how things get done. A true medior who, in my eyes,
+                    thinks and operates at a senior level in his field.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <h3>Jonas Govaerts</h3>
+                <h4>Freelance DevOps Engineer @ Telenet</h4>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4">
-          <div class="testimonial-item">
-            <div class="testimonial-content">
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>I've worked with Joeri on several projects, and he always brings innovative ideas and a
-                  pragmatic approach to problem-solving. A true expert in his field.</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <h3>Gertjan Roggemans</h3>
-              <h4>Senior Consultant @ Axxes</h4>
+          <div class="col-lg-4">
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I’ve worked with Joeri on both internal and external projects. He’s highly motivated, always
+                    eager to learn, and constantly looking for ways to improve both himself and the work he
+                    delivers.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <h3>Gertjan Roggemans</h3>
+                <h4>Senior Consultant @ Axxes</h4>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
-    -->
-    <!-- /Testimonials Section -->
 
-    <!-- /Resume Section -->
+    <!-- /Testimonials Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
