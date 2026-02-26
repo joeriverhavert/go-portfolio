@@ -699,6 +699,12 @@ section,
   gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .hero .social-links {
+    justify-content: center;
+  }
+}
+
 .hero .social-links a {
   width: 50px;
   height: 50px;
@@ -861,6 +867,13 @@ section,
   font-family: var(--nav-font);
   font-size: 14px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+@media (max-width: 768px) {
+  .hero .hero-text .system-label {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hero .hero-text .system-label i {
