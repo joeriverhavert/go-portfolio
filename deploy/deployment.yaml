@@ -21,4 +21,11 @@ spec:
         - containerPort: 80
         imagePullPolicy: Always
       serviceAccountName: golang-portfolio
-        
+      volumeMounts:
+        - name: host-logs
+          mountPath: /logs
+      volumes:
+        - name: host-logs
+          hostPath:
+            path: /var/log/resume-portfolio
+            type: DirectoryOrCreate
