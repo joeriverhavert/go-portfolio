@@ -1,11 +1,10 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: resume-portfolio
   namespace: resume-portfolio
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: resume-portfolio
@@ -14,18 +13,21 @@ spec:
       labels:
         app: resume-portfolio
     spec:
-      containers:
-      - name: resume-portfolio
-        image: docker.io/joeriverhavert/golang-portfolio:latest 
-        ports:
-        - containerPort: 80
-        imagePullPolicy: Always
-        volumeMounts:
-        - name: host-logs
-          mountPath: /logs
+      securityContext:
+        runAsNonRoot: true
+        fsGroup: 65532
       serviceAccountName: resume-portfolio
-      volumes:
-        - name: host-logs
-          hostPath:
-            path: /var/log/resume-portfolio
-            type: DirectoryOrCreate
+      containers:
+        - name: resume-portfolio
+          image: docker.io/joeriverhavert/golang-portfolio:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+              add:
+                - NET_BIND_SERVICE
